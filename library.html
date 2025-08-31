@@ -10,26 +10,24 @@
     <div class="container">
         <div class="sidebar-theme">
             <h1 class="text-center">Navigation</h1>
-            <div class="navigation">
-                <ul id="nav-list">
-                    <li>    
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="library.html">Library</a>
-                    </li>
-                </ul>
+            <div class="navigation">  
+                <a href="index.html" class="nav-button">Home</a>
+                <a href="library.html" class="nav-button">Library</a>
             </div>
         </div>
         <div class="text-center acontent-center header">
             <h1>Library</h1>
         </div>
         <div class="inner-content-container">
-            <div class="text-center acontent-center header">
+            <div class="text-center acontent-center subheader">
                 <h3>Books</h3>
             </div>
             <div class="inner-content-grid jcontent-center">
-                <div class="content-card">1</div>
+                <div class="content-card">
+                    <div class="add-button text-center acontent-center" id="add-book-button">
+                        Add
+                    </div>
+                </div>
                 <div class="content-card">2</div>
                 <div class="content-card">3</div>
                 <div class="content-card">4</div>
@@ -40,5 +38,11 @@
             </div>
         </div>
     </div>
+    <dialog id="addBookDialog">
+        <form class="form" id="addBookForm">
+            <label></label>
+        </form>
+    </dialog>
+    <script src="scripts/library.js"></script>
 </body>
 </html>

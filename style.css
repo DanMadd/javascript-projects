@@ -1,21 +1,48 @@
+:root {
+    --side-bg: #353839;
+    --side-text: #ffd700;
+    --main-bg: #ffd700;
+    --main-text: #353839;
+    --submain-bg: #e6c200;
+}
+
+
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
+    background-color: #f5f5dc;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 20% 80%;
     grid-template-rows: 20% 80%;
     max-height: 100dvh;
 }
 
+.nav-button {
+    display: block;
+    width: 70%;
+    height: 10%;
+    margin: 2.5% 10%;
+    padding: 5%;
+    border-radius: 5px;
+    background-color: var(--main-bg);
+    color: var(--main-text);
+}
+
+.nav-button:hover {
+    width: 75%;
+    filter: brightness(90%);
+}
+
+
 .sidebar-theme {
-    background: #98FB98;
-    background: linear-gradient(180deg, rgba(152, 251, 152, 1) 0%, rgb(224, 113, 39) 100%);
     min-height: 100dvh;
     grid-column: 1 / 2;
+    background-color: var(--side-bg);
+    color: var(--side-text);
 }
 
 .text-center {
@@ -31,10 +58,14 @@ html, body {
 }
 
 .header {
-    background-color: #3cb371;
-    border-color: #216e44;
-    border-style: solid;
+    background-color: var(--main-bg);
+    color: var(--main-text);
     flex-shrink: 0;
+}
+
+.subheader {
+    background-color: var(--submain-bg);
+    color: var(--main-text);
 }
 
 .inner-content-container {
@@ -45,6 +76,7 @@ html, body {
 }
 
 .inner-content-grid {
+    margin: 2.5dvh;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
@@ -58,4 +90,28 @@ html, body {
     border-color: black;
     min-height: 100%;
     min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--side-bg);
+    color: var(--side-text);
+}
+
+.add-button {
+    display: inline-block;
+    height: 25%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    cursor: pointer;
+}
+
+.add-button:hover {
+    filter: brightness(90%);
+}
+
+.add-button:active {
+    filter: brightness(80%);
+    transform: scale(98%);
 }
