@@ -24,7 +24,7 @@
             </div>
             <div class="inner-content-grid jcontent-center">
                 <div class="content-card">
-                    <div class="add-button text-center acontent-center" id="add-book-button">
+                    <div class="add-button text-center acontent-center" id="open-dialog-add-book-button">
                         Add
                     </div>
                 </div>
@@ -38,10 +38,19 @@
             </div>
         </div>
     </div>
-    <dialog id="addBookDialog">
-        <form class="form" id="addBookForm">
-            <label></label>
+    <dialog id="add-book-dialog" class="header">
+        <form class="form" id="add-book-form">
+            <label for="Book">Book Title</label>
+            <input type="text" id="Book">
+            <label for="Author">Author</label>
+            <input type="text" id="Author">
+            <label for="Pages">Total Pages</label>
+            <input type="number" id="Pages" value="0">
         </form>
+        <div>
+            <button id="add-book-button">Add</button>
+            <button id="cancel-book-button" type="reset">Cancel</button>
+        </div>
     </dialog>
     <script src="scripts/library.js"></script>
 </body>
